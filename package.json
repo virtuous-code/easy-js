@@ -1,0 +1,22 @@
+{
+  "name": "@youmaole/easy-js",
+  "version": "1.0.0",
+  "description": "A lib to make the complex and daily used functions easy to use.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtuous-code/easy-js.git"
+  },
+  "keywords": [
+    "easy-js"
+  ],
+  "author": "125512240@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/virtuous-code/easy-js/issues"
+  },
+  "homepage": "https://github.com/virtuous-code/easy-js#readme"
+}
