@@ -6,7 +6,7 @@ A lib to make the complex and daily used functions easy to use.
 * yarn add @youmaole/easy-js
 
 ## Import
-import { store, json } from '@youmaole/easy-js';
+import { store, json, string } from '@youmaole/easy-js';
 
 ## Usage for local storage
 **Methods for storing data in local(by localStorage):**
@@ -37,6 +37,31 @@ import { store, json } from '@youmaole/easy-js';
     var objectString = json.toStr({key: 'this is a test object'});
     var object = json.toObj(objectString);
 ```
+
+## Usage for string
+**Methods to upper case:**
+```string.upper(str)```
+- Example: string.upper('abc'); //ABC
+
+**Methods to lower case:**
+```string.lower(str)```
+- Example: string.lower('ABC'); //abc
+
+**Methods to trim all space:**
+```string.trim(str)```
+- Example: string.trim('ab c d e f g  '); //abcdefg
+
+**Methods to replace all:**
+```string.replace(str, ori, tar)```
+- Example: string.replace('abcabdabeabfab', 'ab', '-'); //-c-d-e-f-
+
+**Methods to compare string ignore case:**
+```string.compareIgnoreCase(str1, str2)```
+- Example: string.compareIgnoreCase('ABC', 'abC'); //true
+
+**Methods to compare string ignore space:**
+```string.compareIgnoreSpace(str1, str2)```
+- Example: string.compareIgnoreSpace('ABC', 'A BC'); //true
 
 ## Note
 - Convert the date object to string before storing to local
