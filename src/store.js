@@ -10,7 +10,7 @@ module.exports = {
     readL: function (key) {
         check.storeCheck();
         check.notNullCheck(key, 'Date key');
-        return json.toStr(localStorage.getItem(key));
+        return json.toObj(localStorage.getItem(key));
     },
     deleteL: function(key) {
         check.storeCheck();
