@@ -11,7 +11,11 @@
     "url": "git+https://github.com/virtuous-code/easy-js.git"
   },
   "keywords": [
-    "easy-js"
+    "easy-js",
+    "daily functions",
+    "localStorage",
+    "storage",
+    "json format"
   ],
   "author": "125512240@qq.com",
   "license": "MIT",
