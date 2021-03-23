@@ -6,7 +6,7 @@ A lib to make the complex and daily used functions easy to use.
 * yarn add @youmaole/easy-js
 
 ## Import
-import { store, json, string } from '@youmaole/easy-js';
+import { store, json, string, array } from '@youmaole/easy-js';
 
 ## Usage for local storage
 **Methods for storing data in local(by localStorage):**
@@ -63,5 +63,21 @@ import { store, json, string } from '@youmaole/easy-js';
 ```string.compareIgnoreSpace(str1, str2)```
 - Example: string.compareIgnoreSpace('ABC', 'A BC'); //true
 
+## Usage for array
+**Methods to compare array with sort:**
+```array.compareWithSort(array1, array2)```
+- Example: array.compareWithSort([1, 2, 'a'], ['a', 2, 1]); //true
+- Example: array.compareWithSort([1, 2, 'a', 3], ['a', 2, 1]); //false
+
+**Methods to compare array with sort:**
+```array.compareWithoutSort(array1, array2)```
+- Example: array.compareWithoutSort([1, 2, 'a'], ['a', 2, 1]); //false
+- Example: array.compareWithoutSort([1, 2, 'a'], [1, 2, 'a']); //true
+
+**Methods to delete element from array by indexes quickly:**
+```array.delete(sourceArray, indexesArray)```
+- Example: array.delete([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], [9, 2, 7, 1]); //[1, 4, 5, 6, 7, 9]
+
 ## Note
 - Convert the date object to string before storing to local
+- No possible to handle object element in array compare functions
