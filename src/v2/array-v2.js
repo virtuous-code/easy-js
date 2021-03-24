@@ -28,6 +28,28 @@ Array.prototype.ymlCompareWithoutSort = function(target) {
     return _compare(this, target);
 }
 
+Array.prototype.ymlUnique = function() {
+    const temp = {};
+    this.map(function(i) {
+        temp[i] = i;
+    });
+    return Object.values(temp);
+}
+
+Array.prototype.ymlUniqueObject = function(uKey) {
+    const temp = {};
+    this.map(function(i) {
+        temp[i[uKey]] = i;
+    });
+    return Object.values(temp);
+}
+
+Array.prototype.ymlSum = function() {
+    return this.reduce(function(pre, cur) {
+        return pre + cur
+    }, 0); 
+}
+
 function _compare(a1, a2) {
     var _equaled = a1.length === a2.length;
     if (_equaled) {
