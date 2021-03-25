@@ -3,8 +3,8 @@ Object.prototype.ymlEqual = function(o) {
     if (!o) {
         return false;
     }
-    const iKeys = keys(this);
-    const oKeys = keys(o);
+    const iKeys = Object.keys(this);
+    const oKeys = Object.keys(o);
     if (iKeys.length !== oKeys.length) {
         return false;
     }
@@ -20,7 +20,7 @@ Object.prototype.ymlContains = function(o) {
     if (!o) {
         return false;
     }
-    const oKeys = keys(o);
+    const oKeys = Object.keys(o);
     for(let i = 0; i < oKeys.length; i++) {
         if (this[oKeys[i]] !== o[oKeys[i]]) {
             return false;

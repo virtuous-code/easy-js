@@ -6,7 +6,11 @@ A lib to make the complex and daily used functions easy to use.
 * yarn add @youmaole/easy-js
 
 ## Import
-import { store, json, string, array } from '@youmaole/easy-js';
+import { store, json, string, array } from '@youmaole/easy-js'; // for version 1.x.x
+import { store, json } '@youmaole/easy-js'; // for version 2.x.x
+
+## Deprecated methods
+The deprecated methods will not be removed, available to use. But not be maintained.
 
 ## Usage for local storage
 **Methods for storing data in local(by localStorage):**
@@ -34,11 +38,106 @@ import { store, json, string, array } from '@youmaole/easy-js';
 ```json.toObj(str)```
 - Example:
 ```
-    var objectString = json.toStr({key: 'this is a test object'});
-    var object = json.toObj(objectString);
+var objectString = json.toStr({key: 'this is a test object'});
+var object = json.toObj(objectString);
 ```
 
-## Usage for string
+## Usage for string V2
+**Methods to upper case:**
+```
+//string.ymlUpper()
+const test = '123xyzabc';
+test.ymlUpper(); // 123XYZABC
+```
+**Methods to lower case:**
+```
+//string.ymlLower()
+const test = '123XYZABC';
+test.ymlLower(); // 123xyzabc
+```
+**Methods to trim all space:**
+```
+//string.ymlTrim()
+const test = '123 X Y Z A B C';
+test.ymlTrim(); // 123XYZABC
+```
+**Methods to replace all:**
+```
+//string.ymlReplace(source, target)
+const test = 'abcabdabeabfab';
+test.ymlReplace('ab', '-'); // -c-d-e-f-
+
+```
+**Methods to compare string ignore case:**
+```
+//string.ymlCompareIgnoreCase(target)
+const test = 'ABC';
+test.ymlCompareIgnoreCase('abC'); // true
+```
+**Methods to compare string ignore space:**
+```
+//string.compareIgnoreSpace(target)
+const test = 'ABC';
+test.compareIgnoreSpace('A BC'); // true
+```
+
+## Usage for array V2
+**Methods to compare array with sort:**
+```
+//array.ymlCompareWithSort(target)
+const test = [1, 2, 'a'];
+test.ymlCompareWithSort(['a', 2, 1]); // true
+test.ymlCompareWithSort([1, 2, 'a', 3]); // false
+```
+
+**Methods to compare array with sort:**
+```
+//array.ymlCompareWithoutSort(target)
+cosnt test = [1, 2, 'a'];
+test.ymlCompareWithoutSort(['a', 2, 1]); // false
+test.ymlCompareWithoutSort([1, 2, 'a']); // true
+```
+**Methods to delete element from array by indexes quickly:**
+```
+//array.ymlDelete(indexes)
+const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+test.ymlDelete([9, 2, 7, 1]); // [1, 4, 5, 6, 7, 9]
+```
+**Methods to unique not object element:**
+```
+//array.ymlUnique()
+const test = [1,2,3,4,2,2,1,3];
+test.ymlUnique(); // [1,2,3,4]
+```
+**Methods to unique object element by specified field:**
+```
+//array.ymlUniqueObject(field)
+const test = [{a:1, b: 2}, {a: 1, b: 3}];
+test.ymlUniqueObject('a'); // [{a: 1, b: 3}]
+```
+**Methods to sum:**
+```
+//array.ymlSum()
+const test = [1,2,3,4,5];
+test.ymlSum(); // 15
+```
+
+## Usage for object(beta) (Warning in react project)
+**Methods to compare the values of object without nested object:**
+```
+//object.ymlEqual(target)
+const test = {a: 1, b: 2};
+test.ymlEqual({a: 1, b: 2}); // true
+```
+**Methods to check contained object without nested object:**
+```
+//object.ymlContains(target)
+const test = {a: 1, b: 2};
+test.ymlContains({a: 1}); // true
+test.ymlContains({a: 1, c: 2}); // false
+```
+
+## Usage for string @deprecated
 **Methods to upper case:**
 ```string.upper(str)```
 - Example: string.upper('abc'); //ABC
@@ -63,7 +162,7 @@ import { store, json, string, array } from '@youmaole/easy-js';
 ```string.compareIgnoreSpace(str1, str2)```
 - Example: string.compareIgnoreSpace('ABC', 'A BC'); //true
 
-## Usage for array
+## Usage for array @deprecated
 **Methods to compare array with sort:**
 ```array.compareWithSort(array1, array2)```
 - Example: array.compareWithSort([1, 2, 'a'], ['a', 2, 1]); //true

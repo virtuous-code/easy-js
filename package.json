@@ -1,6 +1,6 @@
 {
   "name": "@youmaole/easy-js",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A lib to make the complex and daily used functions easy to use.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,9 @@
     "storage",
     "json format",
     "array compare",
-    "array fast delete"
+    "array fast delete",
+    "array unique",
+    "object compare"
   ],
   "author": "125512240@qq.com",
   "license": "MIT",
