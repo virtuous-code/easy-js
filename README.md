@@ -6,8 +6,10 @@ A lib to make the complex and daily used functions easy to use.
 * yarn add @youmaole/easy-js
 
 ## Import
+```
 import { store, json, string, array } from '@youmaole/easy-js'; // for version 1.x.x
 import { store, json } '@youmaole/easy-js'; // for version 2.x.x
+```
 
 ## Deprecated methods
 The deprecated methods will not be removed, available to use. But not be maintained.
