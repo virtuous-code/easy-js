@@ -7,8 +7,8 @@ A lib to make the complex and daily used functions easy to use.
 
 ## Import
 ```
-import { store, json, string, array } from '@youmaole/easy-js'; // for version 1.x.x
-import { store, json } '@youmaole/easy-js'; // for version 2.x.x
+import { store, json, string, array, object } from '@youmaole/easy-js'; // for version 1.x.x
+import { store, json, object } '@youmaole/easy-js'; // for version 2.x.x
 ```
 
 ## Deprecated methods
@@ -124,19 +124,26 @@ const test = [1,2,3,4,5];
 test.ymlSum(); // 15
 ```
 
-## Usage for object(beta) (Warning in react project)
+## Usage for object
 **Methods to compare the values of object without nested object:**
 ```
-//object.ymlEqual(target)
-const test = {a: 1, b: 2};
-test.ymlEqual({a: 1, b: 2}); // true
+//object.ymlObjEqual(o1, o2)
+const o1 = {a: 1, b: 2};
+const o2 = {a: 1, b: 2};
+const o3 = {a: 1};
+object.ymlObjEqual(o1, o2); // true
+object.ymlObjEqual(o1, o3); // false
 ```
 **Methods to check contained object without nested object:**
 ```
-//object.ymlContains(target)
-const test = {a: 1, b: 2};
-test.ymlContains({a: 1}); // true
-test.ymlContains({a: 1, c: 2}); // false
+//object.ymlObjContains(o1, o2)
+const o1 = {a: 1, b: 2};
+const o2 = {a: 1, b: 2};
+const o3 = {a: 1};
+const o4 = {a: 1, c: 2};
+object.ymlObjContains(o1, o2); // true
+object.ymlObjContains(o1, o3); // true
+object.ymlObjContains(o1, o4); // false
 ```
 
 ## Usage for string @deprecated

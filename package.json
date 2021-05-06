@@ -1,6 +1,6 @@
 {
   "name": "@youmaole/easy-js",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "A lib to make the complex and daily used functions easy to use.",
   "main": "index.js",
   "scripts": {

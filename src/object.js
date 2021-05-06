@@ -16,7 +16,7 @@ module.exports = {
         }
         return true;
     },
-    ymlContains: function(o1, o2) {
+    ymlObjContains: function(o1, o2) {
         if (!o1 || !o2) {
             return false;
         }
